@@ -1,0 +1,70 @@
+nav {
+    position: relative;
+    z-index: 10;
+}
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk video latar belakang */
+#bg-video {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1; /* Pastikan video berada di belakang konten */
+}
+
+/* Gaya untuk navigasi */
+nav {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.242); /* Memberikan background transparan untuk meningkatkan keterbacaan */
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Gaya untuk teks dalam header */
+#home {
+    position: relative;
+    z-index: 10;
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 18px;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: center;
+    justify-content: left;
+   
+}

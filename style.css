@@ -1,0 +1,112 @@
+body {
+    background-color: white; /* Background putih */
+    color: black; /* Warna teks hitam */
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: rgba(0, 0, 0, 0.8); /* Warna latar belakang hitam transparan */
+    padding: 10px;
+    text-align: center; /* Menengahkan teks header */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Menghapus margin default */
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 15px; /* Jarak antar menu */
+  }
+  
+  nav ul li a {
+    color: white; /* Teks putih */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+  }
+  
+  .slider {
+    position: relative;
+    max-width: 100%; /* Membuat slider responsif */
+    overflow: hidden; /* Menghilangkan elemen yang melampaui */
+  }
+  
+  .slide {
+    display: none; /* Menyembunyikan slide yang tidak aktif */
+  }
+  
+  .slide.active {
+    display: block; /* Menampilkan slide aktif */
+  }
+  
+  .slide img {
+    width: 100%; /* Gambar responsif */
+    height: auto; /* Mengatur tinggi otomatis */
+  }
+  
+  button.prev, button.next {
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang hitam transparan */
+    color: white; /* Teks putih */
+    border: none; /* Menghapus border */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+    position: absolute; /* Posisi absolut */
+    top: 50%; /* Menempatkan tombol di tengah vertikal */
+    transform: translateY(-50%); /* Menggeser tombol ke tengah */
+    padding: 10px; /* Padding tombol */
+  }
+  
+  button.prev {
+    left: 10px; /* Jarak dari kiri */
+  }
+  
+  button.next {
+    right: 10px; /* Jarak dari kanan */
+  }
+  
+  section {
+    margin: 20px; /* Jarak di sekitar section */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Warna latar belakang section */
+    border-radius: 10px; /* Sudut melengkung untuk section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan untuk section */
+    display: flex; /* Mengaktifkan Flexbox */
+    flex-wrap: wrap; /* Membungkus item jika tidak muat dalam satu baris */
+    justify-content: space-around; /* Menyebarkan item secara merata */
+  }
+  
+  .food-container {
+    display: flex; /* Mengaktifkan Flexbox untuk wadah makanan */
+    flex-wrap: wrap; /* Membungkus item makanan */
+  }
+  
+  .food-item {
+    margin: 10px; /* Jarak antar item makanan */
+    padding: 10px; /* Ruang dalam item makanan */
+    border: 1px solid #ccc; /* Garis batas untuk setiap item */
+    border-radius: 5px; /* Sudut melengkung untuk item makanan */
+    width: 30%; /* Lebar item makanan */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Bayangan untuk item makanan */
+    background-color: rgba(255, 255, 255, 0.8); /* Warna latar belakang item makanan */
+    display: flex; /* Mengaktifkan Flexbox untuk item makanan */
+    flex-direction: column; /* Menempatkan item dalam kolom */
+  }
+  
+  .food-item h3 {
+    margin: 0; /* Menghapus margin default pada judul */
+  }
+  
+  .food-item p {
+    margin: 5px 0; /* Jarak antar paragraf */
+  }
+  
+  footer {
+    text-align: center; /* Menengahkan teks footer */
+    padding: 10px; /* Padding footer */
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang hitam transparan */
+    color: white; /* Teks putih */
+    position: fixed; /* Posisi absolut */
+    bottom: 0; /* Menempatkan footer di bagian bawah */
+    width: 100%; /* Lebar footer */
+    z-index: 1; /* Menempatkan footer di atas */
+  }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="indek.html">Beranda</a></li>
+                <li><a href="Kuliner.html">Kuliner</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><button id="logout-btn">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h2>Kontak Kami</h2>
+            <form action="mailto:kulinerenakjawatimur@gmail.com" method="get">
+                <div>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Kirim</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kuliner Enak. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        function logout() {
+            // Hapus sesi yang ada di sini jika menggunakan sesi penyimpanan
+            localStorage.removeItem('userSession'); // Ganti dengan sesi yang sesuai jika perlu
+
+            // Tampilkan pesan logout
+            alert('Anda telah logout.');
+
+            // Arahkan pengguna kembali ke halaman index
+            window.location.href = 'indek.html'; // Ganti dengan halaman index yang sesuai
+        }
+
+        document.getElementById('logout-btn').addEventListener('click', logout);
+    </script>
+</body>
+</html>
