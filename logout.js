@@ -1,13 +1,20 @@
+// Fungsi untuk logout pengguna
 function logout() {
-    // Hapus sesi yang ada di sini jika menggunakan sesi penyimpanan
-    localStorage.removeItem('userSession'); // Ganti dengan sesi yang sesuai jika perlu
+    // Hapus data user dari localStorage
+    localStorage.removeItem('user'); // Hapus data spesifik, jika ada
+    localStorage.clear(); // Bersihkan semua data dari localStorage jika diperlukan
 
-    // Tampilkan pesan logout
+    // Tampilkan pesan konfirmasi logout
     alert('Anda telah logout.');
 
     // Arahkan pengguna kembali ke halaman index
-    window.location.href = 'index.html'; // Ganti dengan halaman index yang sesuai
+    // Sesuaikan dengan path yang benar jika berada di subfolder atau menggunakan GitHub Pages
+    window.location.href = 'index.html';
+}
 
-    // Tambahkan kode untuk menghapus semua item dari localStorage
-    localStorage.clear();
-  }
+// Event listener untuk tombol logout
+// Pastikan tombol logout memiliki id 'logout-btn' di HTML
+document.getElementById('logout-btn').addEventListener('click', function(event) {
+    event.preventDefault(); // Mencegah aksi default dari tombol (misalnya jika ada link)
+    logout(); // Panggil fungsi logout
+});
