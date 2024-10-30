@@ -6,7 +6,7 @@ function validateLogin() {
     // Logika validasi sederhana
     if (email === "kuliner123@gmail.com" && password === "kulinerenak123") {
         localStorage.setItem('user', email); // Simpan email pengguna di localStorage
-        window.location.href = "kuliner.html"; // Arahkan ke halaman kuliner
+        window.location.href = "Kuliner.html"; // Arahkan ke halaman kuliner
     } else {
         alert("Email atau password salah!");
     }
