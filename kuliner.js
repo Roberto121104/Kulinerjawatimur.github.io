@@ -1,32 +1,26 @@
-let slideIndex = 0; // Indeks slide saat ini
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+    let currentSlide = 0;
 
-// Fungsi untuk menampilkan slide pertama
-function showSlides() {
-  const slides = document.querySelectorAll('.slide'); // Mengambil semua elemen slide
-  if (slideIndex >= slides.length) {
-    slideIndex = 0; // Kembali ke slide pertama
-  } 
-  if (slideIndex < 0) {
-    slideIndex = slides.length - 1; // Kembali ke slide terakhir
-  }
-  slides.forEach(slide => slide.classList.remove('active')); // Menghapus kelas active dari semua slide
-  slides[slideIndex].classList.add('active'); // Menambahkan kelas active ke slide saat ini
-}
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
 
-// Fungsi untuk mengubah slide
-function changeSlide(n) {
-  slideIndex += n; // Mengubah indeks slide
-  showSlides(); // Menampilkan slide baru
-}
+    function nextSlide() {
+        showSlide(currentSlide + 1);
+    }
 
-// Menampilkan slide pertama
-showSlides();
+    function prevSlide() {
+        showSlide(currentSlide - 1);
+    }
 
-// Menambahkan event listener pada tombol prev dan next
-document.querySelector('.prev').addEventListener('click', () => {
-  changeSlide(-1);
-});
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
 
-document.querySelector('.next').addEventListener('click', () => {
-  changeSlide(1);
+    // Auto-advance slides every 5 seconds
+    setInterval(nextSlide, 5000);
 });
