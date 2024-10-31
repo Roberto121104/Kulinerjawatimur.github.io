@@ -1,54 +1,58 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hubungi KEJT untuk informasi lebih lanjut tentang kuliner Indonesia">
-    <title>Kontak Kami - KEJT</title>
+    <title>Kontak Kami</title>
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="index.html" class="logo">
-                <h1>KEJT</h1>
-            </a>
-            <nav aria-label="Navigasi Utama">
-                <ul>
-                    <li><a href="kuliner.html">Kuliner</a></li>
-                    <li><a href="about.html">Tentang</a></li>
-                    <li><a href="contact.html">Kontak</a></li>
-                    <li><button id="logout-btn">Logout</button></li>
-                </ul>
-            </nav>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="indek.html">Beranda</a></li>
+                <li><a href="Kuliner.html">Kuliner</a></li>
+                <li><a href="about.html">Tentang</a></li>
+                <li><a href="contact.html">Kontak</a></li>
+                <li><button id="logout-btn">Logout</button></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Kontak Kami</h2>
-                <form id="contact-form" action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Nama:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Pesan:</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Kirim</button>
-                </form>
-            </div>
+        <section id="contact">
+            <h2>Kontak Kami</h2>
+            <form action="mailto:kulinerenakjawatimur@gmail.com" method="get">
+                <div>
+                    <label for="name">Nama:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="message">Pesan:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Kirim</button>
+            </form>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Kuliner Enak Jawa Timur. Semua hak dilindungi.</p>
-        </div>
+        <p>&copy; 2024 Kuliner Enak. Semua hak cipta dilindungi.</p>
     </footer>
 
-    <script src="contact.js" defer></script>
+    <script>
+        function logout() {
+            // Hapus sesi yang ada di sini jika menggunakan sesi penyimpanan
+            localStorage.removeItem('userSession'); // Ganti dengan sesi yang sesuai jika perlu
+
+            // Tampilkan pesan logout
+            alert('Anda telah logout.');
+
+            // Arahkan pengguna kembali ke halaman index
+            window.location.href = 'indek.html'; // Ganti dengan halaman index yang sesuai
+        }
+
+        document.getElementById('logout-btn').addEventListener('click', logout);
+    </script>
 </body>
 </html>
